@@ -8,7 +8,7 @@ import { transformForOnchain, verifyProof } from "@reclaimprotocol/js-sdk";
 const fetch = (...args) =>
   import("node-fetch").then(({ default: fetch }) => fetch(...args));
 import bodyParser from "body-parser";
-import { extractGitHubPRInfo } from "./utils/extractGitHubPRInfo.js";
+import { extractGitHubPRInfo } from "./extractGitHubPRInfo.js";
 
 const GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;
 const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
