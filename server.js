@@ -34,6 +34,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
 
+app.use("/", (req, res) => {
+  res.send("<h1>Hello LazyDev</h1>");
+});
+
 app.get("/getAccessToken", async (req, res) => {
   console.log(req.query.code);
   const params = `?client_id=${GITHUB_CLIENT_ID}&client_secret=${GITHUB_CLIENT_SECRET}&code=${req.query.code}`;
