@@ -35,7 +35,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use("/", (req, res) => {
-  res.send("<h1>Hello LazyDev</h1>");
+  res.send("Hello LazyDev");
 });
 
 app.get("/getAccessToken", async (req, res) => {
