@@ -100,7 +100,7 @@ app.get("/generate-proof", async (req, res) => {
                 '"user":\\s*{\\s*"login":\\s*"(?<login>[^"]+)",\\s*"id":\\s*(?<id>\\d+),\\s*"node_id":\\s*"(?<node_id>[^"]+)"',
             },
           ],
-        }
+        }, 5, 10000
       )
       .catch((error) => {
         console.log(prUrl);
@@ -123,7 +123,7 @@ app.get("/generate-proof", async (req, res) => {
                 '"login":\\s*"(?<login>[^"]+)",\\s*"id":\\s*(?<id>\\d+),\\s*"node_id":\\s*"(?<node_id>[^"]+)"',
             },
           ],
-        }
+        }, 5, 10000
       )
       .catch((error) => {
         console.log(userUrl);
