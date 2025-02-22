@@ -30,7 +30,12 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://wearelazydev.vercel.app',
+  methods: '*'
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(express.json());
 
